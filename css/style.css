@@ -1,0 +1,353 @@
+body {
+    font-family: Lato;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.hp-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Colors */
+:root {
+    --blue: #4357ad;
+    --teal: #48a9a6;
+    --gold: #d4b483;
+    --red: #c1666b;
+    --white: #fff;
+    --light-gray: #e4dfda;
+    --border-gray: #cfd7de;
+    --dark-text: #1b1f23;
+    --lighter-text: #66727c;
+    --blue-hover: #657ed4;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--blue);
+}
+
+.logo-white {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.brand-name {
+    padding: 0 30px 0 8px;
+}
+
+/* Nav bar */
+.nav-header {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: var(--white);
+    height: 60px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+}
+
+.nav-link {
+    display: none;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .nav-link {
+        display: block;
+    }
+}
+
+.nav-right {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 45px;
+}
+
+.cta-button {
+    display: none;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 8px 20px;
+    text-align: center;
+    transition: 0.25s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--blue-hover);
+}
+
+@media (min-width: 800px) {
+    .cta-button {
+        display: block;
+    }
+}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* Side menu */
+.side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.side-menu-design {
+    background-color: var(--blue);
+    background-size: 1300px 700px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+}
+
+.side-menu-header {
+    border-bottom: 1px solid var(--gold);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 25px 25px;
+}
+
+.side-menu-content {
+    color: var(--white);
+    font-size: 2em;
+    margin: 25px;
+    padding-left: 0;
+}
+
+.side-menu-content li {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.side-menu-contact {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.show-menu {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.hero-container {
+    height: 400px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr;
+    background-image: url(https://www.naco.org/sites/default/files/GettyImages-1198515525.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+@media (min-width: 800px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.introduction {
+    color: var(--white);
+    text-align: center;
+    margin: 0 20px 30px 45px;
+    padding: 20px;
+}
+
+.image-darken {
+    position: relative;
+  }
+  
+.image-darken::before {
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 48px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+}
+
+/* CTA Form */
+
+.more-info-box {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .more-info-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+    }
+}
+
+.more-info-box-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+@media (min-width: 800px) {
+    .more-info-box-mobile {
+        display: none;
+    }
+}
+
+.form-body {
+    border-radius: 9px;
+    background-color: var(--white);
+    padding: 8px 20px 20px 20px;
+    box-shadow: 5px 24px 40px 0 rgb(42 49 59 / 11%);
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .form-body {
+        width: 350px;
+    }
+}
+
+input, button, select, textarea {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="textarea"] {
+    width: calc(100% - 20px);
+    height: 30px;
+    border: 1px solid #aeb1b9;
+    border-radius: 3px;
+}
+
+input[type="text"]:focus, input[type="textarea"]:focus {
+    border: 1px solid var(--teal);
+    box-shadow: 0 0 6px var(--teal);
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="submit"] {
+    width: 100px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--blue-hover);
+}
+
+.cta-button:hover {
+    background-color: var(--blue-hover);
+}
+
+/* Services Section */
+
+.services {
+    margin: 20px 45px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 40px 40px 30px;
+}
+
+@media (min-width: 800px) {
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+.services-title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.services-item {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 800px) {
+    .services-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+.services-icon {
+    font-size: 60px;
+    width: 60px;
+    margin: 20px 20px 0px 0px;
+    color: var(--teal);
+}
+
+.services-content h3 {
+    font-size: 22px;
+}
+
+@media (min-width: 800px) {
+    .services-content {
+        padding-left: 10px;
+    }
+}
