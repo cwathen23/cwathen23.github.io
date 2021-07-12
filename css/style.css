@@ -12,6 +12,7 @@ p {
 }
 
 /* Colors */
+
 :root {
     --blue: #4357ad;
     --teal: #48a9a6;
@@ -44,15 +45,21 @@ p {
 }
 
 /* Nav bar */
+
 .nav-header {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     background-color: var(--white);
     height: 60px;
     padding: 15px 25px;
     width: calc(100% - 50px);
+    z-index: 2;
 }
+
+/* #top-nav {
+    position: fixed;
+} */
 
 .nav-left {
     display: flex;
@@ -67,6 +74,11 @@ p {
     font-size: 16px;
     padding: 0 10px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--blue);
 }
 
 @media (min-width: 800px) {
@@ -117,6 +129,7 @@ p {
 }
 
 /* Side menu */
+
 .side-menu-position {
     padding-top: 25px;
     position: fixed;
@@ -124,7 +137,7 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .side-menu-design {
@@ -155,6 +168,11 @@ p {
     margin-bottom: 25px;
 }
 
+.side-menu-content a {
+    text-decoration: none;
+    color: var(--white);
+}
+
 .side-menu-contact {
     background-color: var(--red);
     color: var(--white);
@@ -168,8 +186,12 @@ p {
     transform: translateX(0%);
 }
 
+/* Hero */
+
 .hero-container {
-    height: 400px;
+    height: 450px;
+    background: black;
+    overflow: hidden;
     display: grid;
     grid-gap: 25px;
     grid-template-columns: 1fr;
@@ -187,7 +209,7 @@ p {
 .introduction {
     color: var(--white);
     text-align: center;
-    margin: 0 20px 30px 45px;
+    margin: 0 30px 30px 30px;
     padding: 20px;
 }
 
@@ -306,7 +328,7 @@ input[type="submit"]:hover {
 .services-container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 20px 40px 40px 30px;
+    margin: 20px 40px 60px 40px;
 }
 
 @media (min-width: 800px) {
@@ -339,7 +361,7 @@ input[type="submit"]:hover {
 .services-icon {
     font-size: 60px;
     width: 60px;
-    margin: 20px 20px 0px 0px;
+    margin: 20px;
     color: var(--teal);
 }
 
@@ -356,20 +378,22 @@ input[type="submit"]:hover {
 /* Can I Use It Section */
 
 .use {
-    margin: 20px 45px;
+    background-image: linear-gradient(var(--blue), var(--teal));
+    color: var(--white);
+    padding: 15px 0;
 }
 
 .use-container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 20px 40px 40px 30px;
+    margin: 20px 80px 40px 80px;
 }
 
 @media (min-width: 800px) {
     .use-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
     }
 }
 
@@ -380,52 +404,49 @@ input[type="submit"]:hover {
 
 .use-item {
     display: block;
-    justify-content: center;
-    align-items: center;
 }
 
 @media (min-width: 800px) {
     .use-item {
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
     }
 }
 
+.use-item h3 {
+    text-align: left!important;
+    font-size: 20px;
+}
+
 .use-icon {
-    font-size: 60px;
-    width: 60px;
-    margin: 20px 20px 0px 0px;
-    color: var(--teal);
+    font-size: 30px;
+    width: 30px;
+    margin: 10px 20px 0px 0px;
+    color: var(--white);
 }
 
-.use-content h3 {
-    font-size: 22px;
-}
-
-@media (min-width: 800px) {
-    .use-content {
-        padding-left: 10px;
-    }
+.use-content {
+    display: flex;
 }
 
 /* Clients Section */
 
 .clients {
-    margin: 20px 45px;
+    margin: 20px 100px;
 }
 
 .clients-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 20px 40px 40px 30px;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 45px 60px 45px;
 }
 
 @media (min-width: 800px) {
     .clients-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        display: flex;
     }
 }
 
@@ -434,55 +455,59 @@ input[type="submit"]:hover {
     padding-top: 10px;
 }
 
-.clients-item {
+.clients-image {
     display: block;
     justify-content: center;
     align-items: center;
+    width: 6em;
+    background-size: cover;
+    margin: 1em;
 }
 
 @media (min-width: 800px) {
-    .clients-item {
+    .clients-image {
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
-.clients-icon {
-    font-size: 60px;
-    width: 60px;
-    margin: 20px 20px 0px 0px;
-    color: var(--teal);
-}
-
-.clients-content h3 {
-    font-size: 22px;
-}
-
-@media (min-width: 800px) {
-    .clients-content {
-        padding-left: 10px;
-    }
+.clients-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* About Us Section */
 
 .about {
-    margin: 20px 45px;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+    background-image: url(https://www.naco.org/sites/default/files/GettyImages-1147195672_1920.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.image-darken-blue {
+    position: relative;
+  }
+  
+.image-darken-blue::before {
+    position: absolute;
+    background-color: rgba(67, 87, 173, 0.8);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
 }
 
 .about-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 20px 40px 40px 30px;
-}
-
-@media (min-width: 800px) {
-    .about-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
+    color: var(--white);
+    text-align: center;
+    margin: 0 50px 0px 50px;
+    padding: 20px;
 }
 
 .about-title {
@@ -490,34 +515,14 @@ input[type="submit"]:hover {
     padding-top: 10px;
 }
 
-.about-item {
-    display: block;
-    justify-content: center;
-    align-items: center;
+.about-text {
+    font-size: 20px;
+    padding-top: 10px;
 }
 
 @media (min-width: 800px) {
-    .about-item {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-}
-
-.about-icon {
-    font-size: 60px;
-    width: 60px;
-    margin: 20px 20px 0px 0px;
-    color: var(--teal);
-}
-
-.about-content h3 {
-    font-size: 22px;
-}
-
-@media (min-width: 800px) {
-    .about-content {
-        padding-left: 10px;
+    .about-text {
+        font-size: 24px;
     }
 }
 
@@ -530,13 +535,13 @@ input[type="submit"]:hover {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 20px 40px 40px 30px;
+    margin: 20px 40px 40px 40px;
 }
 
 @media (min-width: 800px) {
     .contact-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 40px;
     }
 }
@@ -548,32 +553,88 @@ input[type="submit"]:hover {
 
 .contact-item {
     display: block;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 @media (min-width: 800px) {
     .contact-item {
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         justify-content: flex-start;
     }
 }
 
 .contact-icon {
-    font-size: 60px;
-    width: 60px;
-    margin: 20px 20px 0px 0px;
-    color: var(--teal);
+    font-size: 40px;
+    width: 40px;
+    margin: 20px 0px 0px 0px;
+    color: black;
 }
 
-.contact-content h3 {
-    font-size: 22px;
+.contact-content p {
+    font-size: 18px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 @media (min-width: 800px) {
     .contact-content {
-        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
     }
 }
 
+.contact-content a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    background-color: var(--lighter-text);
+    color: var(--white);
+    height: 100%;
+}
+
+.copyright {
+    padding: 20px;
+    font-size: 10px;
+}
+
+/* Exit Intent Popup */
+.exit-intent-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background: rgba(33, 33, 33, 0.8);
+    transform: translateY(60%) scale(0);
+    transition: transform 0.3s;
+}
+
+.exit-intent-popup.visible {
+    transform: translateY(0) scale(1);
+}
+
+.modal-message {
+    background-color: var(--white);
+    border: 4px solid var(--teal);
+    font-size: 24px;
+    text-align: center;
+    padding: 40px 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

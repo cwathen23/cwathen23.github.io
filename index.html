@@ -59,19 +59,19 @@
             <section class="more-info-box-mobile">
                 <div class="form-body">
                     <h2>Get More Information</h2>
-                    <form>
+                    <form id="more-info-form">
                         <fieldset>
                             <input type="text" id="full-name" placeholder="Name" required>
                             <input type="text" id="email" placeholder="Email" required>
                             <input type="text" id="phone" placeholder="Phone" required>
                             <input type="textarea" id="message" placeholder="Message">
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" id="submit-btn">
                         </fieldset>
                     </form>
                   </div>
             </section>
             <div class="services-title">
-                <h1><a name=services>Services</a></h1>
+                <h1><a name="services">Services</a></h1>
             </div>
             <div class="services-container">
                 <div class="services-item">
@@ -116,43 +116,76 @@
         <!-- Can I Use It? section -->
         <section class="use">
             <div class="use-title">
-                <h1><a name=use>Can I Use It?</a></h1>
+                <h1><a name="use">Can I Use It?</a></h1>
             </div>
             <div class="use-container">
-                <div class="services-item">
-                    <div class="services-icon">
-                        <span class="fas fa-forward"></span>
+                <div class="use-item">
+                    <h3>SuperWylbur will run on:</h3>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>
+                        <p>The IBM z/OS, OS/390, MVS/ESA, MVS/XA and MVS/370 operating systems</p>
                     </div>
-                    <div class="services-content">
-                        <h3>Boost Productivity</h3>
-                        <p>SuperWylbur uses resources efficiently. The system can support more than 1,000 simultaneous users in a single address space. SuperWylbur's built-in resource manager prevents any one user from consuming excessive machine resources.</p>
-                    </div>
-                </div>
-                <div class="services-item">
-                    <div class="services-icon">
-                        <span class="fas fa-keyboard"></span>
-                    </div>
-                    <div class="services-content">
-                        <h3>Text Editing</h3>
-                        <p>SuperWylbur makes it easy to create, modify, store and retrieve text quickly and accurately, such as letters, manuals, computer programs or data.</p>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>Any IBM System/370, System/390 or compatible processor that will run an "SP" version of MVS</p>
                     </div>
                 </div>
-                <div class="services-item">
-                    <div class="services-icon">
-                        <span class="fas fa-comments"></span>
+                <div class="use-item">
+                    <h3>SuperWylbur may be accessed by:</h3>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>
+                        <p>Any IBM 3270 or compatible VTAM terminal</p>
                     </div>
-                    <div class="services-content">
-                        <h3>Macros and Panels</h3>
-                        <p>The SuperWylbur macro processor can interact with the terminal in line mode or with full screen panels, issue SuperWylbur commands, evaluate expressions and assign the results to variables and execute conditional logic.</p>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>A VTAM logical unit type 1 device comparable to an IBM 3767 or an ASCII terminal connected by the Network Terminal Option (NTO)</p>
+                    </div>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>An ASCII terminal using SuperWylbur's Milten telecommunications access method</p>
                     </div>
                 </div>
-                <div class="services-item">
-                    <div class="services-icon">
-                        <span class="fas fa-file-export"></span>
+                <div class="use-item">
+                    <h3>SuperWylbur supports:</h3>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>
+                        <p>External Security Managers: RACF, ACF2 and TOP SECRET</p>
                     </div>
-                    <div class="services-content">
-                        <h3>Job Entry and Retrieval</h3>
-                        <p>SuperWylbur's job entry and retrieval features allow you to submit jobs to your computer's batch stream and selectively retrieve job output at your terminal and/or route job output to central printers or remote sites.</p>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>System Managed Storage (SMS)</p>
+                    </div>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>HSM</p>
+                    </div>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>PANVALET (retrieval only)</p>
+                    </div>
+                    <div class="use-content">
+                        <div class="use-icon">
+                            <img src="https://www.cubix.co/aff/themes/cubix//assets/images/app/ld-list-icon.svg">
+                        </div>                        
+                        <p>LIBRARIAN (retrieval only)</p>
                     </div>
                 </div>
             </div>
@@ -161,89 +194,46 @@
         <!-- Clients section -->
         <section class="clients">
             <div class="clients-title">
-                <h1><a name=clients>Clients</a></h1>
+                <h1><a name="clients">Clients</a></h1>
             </div>
             <div class="clients-container">
-                <div class="clients-item">
-                    <div class="clients-icon">
-                        <span class="fas fa-forward"></span>
-                    </div>
-                    <div class="clients-content">
-                        <h3>Boost Productivity</h3>
-                        <p>SuperWylbur uses resources efficiently. The system can support more than 1,000 simultaneous users in a single address space. SuperWylbur's built-in resource manager prevents any one user from consuming excessive machine resources.</p>
-                    </div>
+                <div class="clients-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Logo_of_the_United_States_Army.svg/1200px-Logo_of_the_United_States_Army.svg.png">
                 </div>
-                <div class="clients-item">
-                    <div class="clients-icon">
-                        <span class="fas fa-keyboard"></span>
-                    </div>
-                    <div class="clients-content">
-                        <h3>Text Editing</h3>
-                        <p>SuperWylbur makes it easy to create, modify, store and retrieve text quickly and accurately, such as letters, manuals, computer programs or data.</p>
-                    </div>
+                <div class="clients-image">
+                    <img src="https://i.pinimg.com/originals/a3/5b/71/a35b71804f6dd902d19458d830536185.jpg">
                 </div>
-                <div class="clients-item">
-                    <div class="clients-icon">
-                        <span class="fas fa-comments"></span>
-                    </div>
-                    <div class="clients-content">
-                        <h3>Macros and Panels</h3>
-                        <p>The SuperWylbur macro processor can interact with the terminal in line mode or with full screen panels, issue SuperWylbur commands, evaluate expressions and assign the results to variables and execute conditional logic.</p>
-                    </div>
+                <div class="clients-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/United_States_Department_of_Defense_Seal.svg/1200px-United_States_Department_of_Defense_Seal.svg.png">
                 </div>
-                <div class="clients-item">
-                    <div class="clients-icon">
-                        <span class="fas fa-file-export"></span>
-                    </div>
-                    <div class="clients-content">
-                        <h3>Job Entry and Retrieval</h3>
-                        <p>SuperWylbur's job entry and retrieval features allow you to submit jobs to your computer's batch stream and selectively retrieve job output at your terminal and/or route job output to central printers or remote sites.</p>
-                    </div>
+                <div class="clients-image">
+                    <img src="https://www.nicepng.com/png/detail/247-2471410_usc-logo-png-transparent-university-of-southern-california.png">
+                </div>
+            </div>
+            <div class="clients-container">
+                <div class="clients-image">
+                    <img src="https://impactnw.org/wp-content/uploads/2019/12/6130-300x300.png">
+                </div>
+                <div class="clients-image">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/04/Texas-Instruments-logo.jpg">
+                </div>
+                <div class="clients-image">
+                    <img src="https://www.nicepng.com/png/detail/968-9680394_mcgraw-hill-mcgraw-hill-logo-png.png">
+                </div>
+                <div class="clients-image">
+                    <img src="https://alumni.fsu.edu/sites/alumni.fsu.edu/files/images/Community/Clubs/Image_Gallery/FSU%20Seal.png">
                 </div>
             </div>
         </section>
 
         <!-- About Us section -->
-        <section class="about">
-            <div class="about-title">
-                <h1><a name=about>About Us</a></h1>
-            </div>
+        <section class="about image-darken-blue">
             <div class="about-container">
-                <div class="about-item">
-                    <div class="about-icon">
-                        <span class="fas fa-forward"></span>
-                    </div>
-                    <div class="about-content">
-                        <h3>Boost Productivity</h3>
-                        <p>SuperWylbur uses resources efficiently. The system can support more than 1,000 simultaneous users in a single address space. SuperWylbur's built-in resource manager prevents any one user from consuming excessive machine resources.</p>
-                    </div>
+                <div class="about-title">
+                    <h1><a name="about">About Us</a></h1>
                 </div>
-                <div class="about-item">
-                    <div class="about-icon">
-                        <span class="fas fa-keyboard"></span>
-                    </div>
-                    <div class="about-content">
-                        <h3>Text Editing</h3>
-                        <p>SuperWylbur makes it easy to create, modify, store and retrieve text quickly and accurately, such as letters, manuals, computer programs or data.</p>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon">
-                        <span class="fas fa-comments"></span>
-                    </div>
-                    <div class="about-content">
-                        <h3>Macros and Panels</h3>
-                        <p>The SuperWylbur macro processor can interact with the terminal in line mode or with full screen panels, issue SuperWylbur commands, evaluate expressions and assign the results to variables and execute conditional logic.</p>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon">
-                        <span class="fas fa-file-export"></span>
-                    </div>
-                    <div class="about-content">
-                        <h3>Job Entry and Retrieval</h3>
-                        <p>SuperWylbur's job entry and retrieval features allow you to submit jobs to your computer's batch stream and selectively retrieve job output at your terminal and/or route job output to central printers or remote sites.</p>
-                    </div>
+                <div class="about-text">
+                        <p>SuperWylbur is the partner of choice for America's leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.</p>
                 </div>
             </div>
         </section>
@@ -251,47 +241,42 @@
         <!-- Contact section -->
         <section class="contact">
             <div class="contact-title">
-                <h1><a name=contact>Contact</a></h1>
+                <h1><a name="contact">Contact</a></h1>
             </div>
             <div class="contact-container">
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <span class="fas fa-forward"></span>
+                        <i class="fas fa-at"></i>
                     </div>
                     <div class="contact-content">
-                        <h3>Boost Productivity</h3>
-                        <p>SuperWylbur uses resources efficiently. The system can support more than 1,000 simultaneous users in a single address space. SuperWylbur's built-in resource manager prevents any one user from consuming excessive machine resources.</p>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@superwylbur.com">info@superwylbur.com</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <span class="fas fa-keyboard"></span>
+                        <span class="fas fa-phone"></span>
                     </div>
                     <div class="contact-content">
-                        <h3>Text Editing</h3>
-                        <p>SuperWylbur makes it easy to create, modify, store and retrieve text quickly and accurately, such as letters, manuals, computer programs or data.</p>
+                        <h3>Call</h3>
+                        <p>(301) 530-1100</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <span class="fas fa-comments"></span>
+                        <span class="fas fa-envelope"></span>
                     </div>
                     <div class="contact-content">
-                        <h3>Macros and Panels</h3>
-                        <p>The SuperWylbur macro processor can interact with the terminal in line mode or with full screen panels, issue SuperWylbur commands, evaluate expressions and assign the results to variables and execute conditional logic.</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <span class="fas fa-file-export"></span>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Job Entry and Retrieval</h3>
-                        <p>SuperWylbur's job entry and retrieval features allow you to submit jobs to your computer's batch stream and selectively retrieve job output at your terminal and/or route job output to central printers or remote sites.</p>
+                        <h3>Mail</h3>
+                        <p>4720 Edgefield Rd.<br>
+                        Bethesda, MD 20814</p>
                     </div>
                 </div>
             </div>
         </section>
+        <footer>
+            <p class="copyright">Copyright © 2021 SuperWylbur Systems, Inc. All rights reserved.</p>
+        </footer>
     </main>
 
     <!-- Side Menu -->
@@ -304,13 +289,29 @@
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close this menu" id="menu-close">
         </header>
         <ul class="side-menu-content">
-            <li>Services</li>
-            <li>Industries & Expertise</li>
-            <li>About Us</li>
-            <li class="side-menu-contact">Contact Us</li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#use">Can I Use It?</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li class="side-menu-contact"><a href="#contact">Contact Us</a></li>
         </ul>
     </aside>
+
+    <!-- Modal -->
+    <aside class="exit-intent-popup">
+        <section class="modal-message">
+            <strong>Don't leave just yet</strong>
+            <p>Sign up for our mailing list to receive a free consultation!</p>
+            <input type="email" placeholder="Your email address" class="email">
+            <button class="submit">Submit</button>
+            <span class="close">x</span>
+        </section>
+    </aside>
+
     <script src="js/plugins.js" async defer></script>
     <script src="js/script.js" async defer></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 </body>
 </html>
