@@ -1,14 +1,11 @@
 body {
     font-family: Lato;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 p {
     line-height: 1.6;
-}
-
-.hp-container {
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 /* Colors */
@@ -55,6 +52,7 @@ p {
     height: 60px;
     padding: 15px 25px;
     width: calc(100% - 50px);
+    z-index: 2;
 }
 
 .sticky {
@@ -63,7 +61,7 @@ p {
     width: 100%;
 }
 
-.sticky + main {
+.sticky + .hp-container {
     padding-top: 60px;
 }
 
@@ -108,6 +106,7 @@ p {
     cursor: pointer;
     border-radius: 25px;
     padding: 8px 20px;
+    margin-right: 50px;
     text-align: center;
     text-decoration: none;
     transition: 0.25s ease-in-out;
@@ -204,6 +203,7 @@ p {
     background-image: url(https://www.naco.org/sites/default/files/GettyImages-1198515525.jpg);
     background-size: cover;
     z-index: 1;
+    margin-top: 30px;
 }
 
 @media (min-width: 800px) {
@@ -328,7 +328,7 @@ input[type="submit"]:hover {
 /* Services Section */
 
 .services {
-    margin: 20px 45px;
+    margin: 40px 45px;
 }
 
 .services-container {
@@ -392,7 +392,7 @@ input[type="submit"]:hover {
 .use {
     background-image: linear-gradient(var(--blue), var(--teal));
     color: var(--white);
-    padding: 15px 0;
+    padding: 40px 0;
 }
 
 .use-container {
@@ -428,7 +428,7 @@ input[type="submit"]:hover {
 }
 
 .use-item h3 {
-    text-align: left!important;
+    text-align: left;
     font-size: 20px;
 }
 
@@ -446,7 +446,7 @@ input[type="submit"]:hover {
 /* Clients Section */
 
 .clients {
-    margin: 20px 100px;
+    margin: 40px 100px;
 }
 
 .clients-container {
@@ -491,6 +491,7 @@ input[type="submit"]:hover {
 
 .about {
     height: 400px;
+    padding-top: 20px;
     display: flex;
     overflow: hidden;
     background-image: url(https://www.naco.org/sites/default/files/GettyImages-1147195672_1920.jpg);
@@ -597,6 +598,12 @@ input[type="submit"]:hover {
 .contact-content a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.contact-content a:hover {
+    color: var(--blue-hover);
 }
 
 footer {

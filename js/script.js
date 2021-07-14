@@ -9,7 +9,19 @@ function toggleMenu() {
     menu.classList.toggle("show-menu");
 };
 
-//Get More Information Form
+// Sticky Navbar
+window.onscroll = function() {myFunction()};
+var navbar = document.querySelector(".nav-header");
+var sticky = navbar.offsetTop;
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  };
+
+// Get More Information Form
 
 var formInput = document.getElementById("more-info-form");
 formInput.addEventListener("submit", function(event) {
@@ -24,7 +36,7 @@ formInput.addEventListener("submit", function(event) {
     message.trim().toLowerCase();
 });
 
-//Smooth Anchor Scrolling
+// Smooth Anchor Scrolling
 
 var $root = $('html, body');
 $('a[href^="#"]').click(function () {
@@ -62,7 +74,6 @@ rootModal.addEventListener("click", buttonClose);
 const exit = e => {
     console.log(e.target.className);
     const shouldExit =
-        // e.target.className === 'close' ||
         e.keyCode === 27;
     if (shouldExit) {
         document.querySelector('.exit-intent-popup').classList.remove('visible');
